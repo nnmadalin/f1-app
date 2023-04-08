@@ -3,6 +3,7 @@ var jfile;
 $.getJSON('https://ergast.com/api/f1/2023/3/results.json', function(jfile) {
    console.log(jfile);
    var dir = jfile["MRData"]["RaceTable"]["Races"]["0"]["Results"];
+   var dir2 = jfile["MRData"]["RaceTable"]["Races"]["0"];
    console.log(jfile["MRData"]["RaceTable"]["Races"]["0"]["Results"])
    for(let i = 19; i >= 0; i--){
       var table = document.getElementById("race_results");
@@ -25,5 +26,14 @@ $.getJSON('https://ergast.com/api/f1/2023/3/results.json', function(jfile) {
          TIME.innerHTML = "DNF";
       PTS.innerHTML = dir[i]["points"];
    }
+   var x;
+   $.getJSON('https://api.open-meteo.com/v1/forecast?latitude='+dir2["Circuit"]["Location"]["lat"]+'&longitude='+dir2["Circuit"]["Location"]["long"]+'&current_weather=true', function(x) {
+      console.log(x);
+      document.getElementById("grade").innerHTML=x["current_weather"]["temperature"] + "°C";
+
+      
+   });
+
 });
+
 
