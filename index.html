@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <script src = "script.js"></script>
+      <title>F1</title>
+   </head>
+   <body>
+      <div class='header'>
+         <div class='title'>
+            <h1>FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX</h1>
+            <p>Melbourne circuit</p>
+         </div>
+         <a href="https://www.formula1.com" target={'_blank'}><img src= "F1.svg.png"/></a>
+      </div>
+      <div class='main'>
+         <div class="left">
+            <div class="map_circuit">
+               <img src="Australia_Circuit.png" />
+            </div>
+            <div class='stats_circuit'>
+               <div class='card'>
+                  <p>Number <br />of laps</p>
+                  <span>58</span>
+               </div>
+               <div class='card'>
+                  <p>Circuit <br /> lenght</p>
+                  <span>5.278<span class='under'>km</span></span>
+               </div>
+               <div class='card'>
+                  <p>Race <br /> Distance</p>
+                  <span>306.124<span class='under'>km</span></span>
+               </div>
+            </div>
+         </div>
+         <div class='right'>
+            <div class='info'>
+               <div class='calendar'>
+                  <div class='card'><span class='date'>31 mar - 32 mar</span></div>
+                  <table>
+                     <tr>
+                        <th>Practice 1</th><th>Sat</th><th>12:00-13:00</th>
+                     </tr>
+                     <tr>
+                        <th>Practice 2</th><th>Sat</th><th>12:00-13:00</th>
+                     </tr>
+                     <tr>
+                        <th>Practice 3</th><th>Sat</th><th>12:00-13:00</th>
+                     </tr>
+                     <tr>
+                        <th>Qualifying</th><th>Sat</th><th>12:00-13:00</th>
+                     </tr>
+                     <tr class='race'>
+                        <th>Race</th><th>Sat</th><th>12:00-13:00</th>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div class='control_table'>
+               <button>Race</button>
+               <button>Starting grid</button>
+               <button>Qualifying</button>
+               <button>Practice 3</button>
+               <button>Practice 2</button>
+               <button>Practice 1</button>
+            </div>
+            <div class='table'>
+               <table >
+                  <thead>
+                     <th>POS</th>
+                     <th>NO</th>
+                     <th>DRIVER</th>
+                     <th>CAR</th>
+                     <th>LAPS</th>
+                     <th>TIME/RETIRED</th>
+                     <th>PTS</th>
+                  </thead>
+                  <tbody id = "race_results">
+                     
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
